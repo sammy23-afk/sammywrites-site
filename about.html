@@ -8,29 +8,48 @@
 </head>
 
 <body class="pink-mode">
-  <div id="loader">
-    <div class="spinner"></div>
-    <p>Loading About Me... 🌸</p>
-  </div>
+  <!-- Loader -->
+  <div id="loader"><div class="spinner"></div><p>Loading About Me... 🌸</p></div>
+  <div id="progressBar"></div>
 
+  <!-- Header -->
   <header>
     <h1>Sammy Writes ✨</h1>
     <button id="menuToggle">☰</button>
-    <nav id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html" aria-current="page">About</a>
-      <a href="posts.html">Blog</a>
-    </nav>
-    <button id="themeBtn" class="theme-toggle">🎨</button>
   </header>
 
+  <!-- Side Menu -->
+  <aside id="sideMenu">
+    <button id="closeMenu">✕</button>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="about.html">🌟 About</a>
+      <a href="posts.html">📝 Blog</a>
+      <a href="post4.html">💖 Authenticity</a>
+      <a href="resources.html">📚 Resources</a>
+      <a href="projects.html">🎨 Projects</a>
+      <a href="speaking.html">🎤 Speaking</a>
+      <a href="contact.html">📬 Contact</a>
+      <hr>
+      <button id="increaseFont">A+</button>
+      <button id="resetFont">A</button>
+      <button id="decreaseFont">A-</button>
+      <button id="contrastToggle">♿ High Contrast</button>
+    </nav>
+  </aside>
+  <div id="overlay"></div>
+
+  <!-- Banner -->
   <div class="post1-banner">
     <h1>🌟 About Me 🌟</h1>
     <p>A little intro, from me to you 💖</p>
   </div>
 
+  <!-- Main -->
   <main>
-    <section class="about-card">
+    <section class="about-card profile">
+      <!-- Replace the src with your actual file path -->
+      <img src="img/profile.jpg" alt="Photo of Sammy" class="profile-pic">
       <h2>Hi there 👋 I&apos;m Sammy</h2>
       <p>Welcome to my little corner of the web. I built this site from scratch to share my thoughts, ideas, and writing. 🌸</p>
     </section>
@@ -48,16 +67,14 @@
     <section class="about-card">
       <h2>What You&apos;ll Find Here ✨</h2>
       <p>
-        Stick around and you&apos;ll find posts about life, growth, creativity, and the
-        messy-but-beautiful process of figuring things out 💖.
+        This site is a space for me to share my learning journey, creative projects, and personal reflections. 
+        You&apos;ll find posts about life, growth, creativity, and the messy but beautiful process of figuring things out 💖.
       </p>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Sammy Writes</p>
-  </footer>
-
+  <!-- Footer -->
+  <footer><p>&copy; 2025 Sammy Writes</p></footer>
   <button id="backToTop">↑</button>
   <script src="script.js"></script>
 </body>

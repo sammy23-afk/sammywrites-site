@@ -13,11 +13,32 @@ const facts = [
   "Some cats are allergic to humans 🐱",
   "The first computer bug was a moth 🦋"
 ];
-const btn = document.getElementById("surpriseBtn");
-if (btn) {
-  btn.addEventListener("click", () => {
+const factBtn = document.getElementById("surpriseBtn");
+if (factBtn) {
+  factBtn.addEventListener("click", () => {
     const randomFact = facts[Math.floor(Math.random() * facts.length)];
     document.getElementById("message").innerHTML = randomFact;
+  });
+}
+
+// Side menu toggle
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+const openMenuBtn = document.getElementById("menuToggle");
+const closeMenuBtn = document.getElementById("closeMenu");
+
+if (openMenuBtn && closeMenuBtn && sideMenu && overlay) {
+  openMenuBtn.addEventListener("click", () => {
+    sideMenu.classList.add("show");
+    overlay.classList.add("show");
+  });
+  closeMenuBtn.addEventListener("click", () => {
+    sideMenu.classList.remove("show");
+    overlay.classList.remove("show");
+  });
+  overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("show");
+    overlay.classList.remove("show");
   });
 }
 
@@ -31,7 +52,6 @@ if (localStorage.getItem("theme")) {
   document.body.className = localStorage.getItem("theme");
   currentTheme = themes.indexOf(localStorage.getItem("theme"));
 }
-
 if (themeBtn) {
   themeBtn.addEventListener("click", () => {
     document.body.classList.remove(themes[currentTheme]);
@@ -50,13 +70,6 @@ if (backToTop) {
   backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-}
-
-// Mobile menu
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => navLinks.classList.toggle("show"));
 }
 
 // Search filter
@@ -105,3 +118,32 @@ document.querySelectorAll("blockquote").forEach(block => {
     setTimeout(() => (btn.textContent = "📋 Copy"), 1500);
   });
 });
+
+// Accessibility: font size toggles
+let fontSize = 100;
+const incBtn = document.getElementById("increaseFont");
+const decBtn = document.getElementById("decreaseFont");
+const resetBtn = document.getElementById("resetFont");
+
+if (incBtn && decBtn && resetBtn) {
+  incBtn.addEventListener("click", () => {
+    fontSize += 10;
+    document.body.style.fontSize = fontSize + "%";
+  });
+  decBtn.addEventListener("click", () => {
+    fontSize = Math.max(80, fontSize - 10);
+    document.body.style.fontSize = fontSize + "%";
+  });
+  resetBtn.addEventListener("click", () => {
+    fontSize = 100;
+    document.body.style.fontSize = "100%";
+  });
+}
+
+// Accessibility: high contrast toggle
+const contrastBtn = document.getElementById("contrastToggle");
+if (contrastBtn) {
+  contrastBtn.addEventListener("click", () => {
+    document.body.classList.toggle("high-contrast-mode");
+  });
+}
