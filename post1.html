@@ -8,22 +8,28 @@
 </head>
 
 <body class="pink-mode">
-  <header>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading first thoughts... ✨</p>
+  </div>
+
+  <header role="banner">
     <!-- Site title -->
     <h1>Sammy Writes ✨</h1>
 
     <!-- Hamburger menu -->
-    <button id="menuToggle">☰</button>
+    <button id="menuToggle" aria-label="Menu">☰</button>
 
     <!-- Navigation links -->
-    <nav id="navLinks">
+    <nav id="navLinks" role="navigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="posts.html">Blog</a>
     </nav>
 
     <!-- Theme switch button -->
-    <button id="themeBtn">Switch Theme</button>
+    <button id="themeBtn" class="theme-toggle" aria-label="Switch Theme">🎨</button>
   </header>
 
   <!-- Banner for Post 1 -->
@@ -32,9 +38,9 @@
     <p>That moment when code finally works 🎉</p>
   </div>
 
-  <main>
+  <main role="main">
     <article class="post1-article">
-      <img src="https://picsum.photos/700/300?random=1" alt="first website banner">
+      <img src="https://picsum.photos/700/300?random=1" alt="Celebrating first website launch">
 
       <p>Today I launched my very first website from scratch 🎊.  
       Not Wix, not WordPress, but actual <code>&lt;html&gt;</code>, <code>&lt;css&gt;</code>, and some JavaScript magic. Honestly? It feels like watching a dream turn real on screen.</p>
@@ -48,12 +54,21 @@
       <p>So here’s to beginnings, chaos, and curly braces. Stick around besties, this is just the start 💖😊.</p>
     </article>
 
+    <!-- Post navigation -->
+    <nav class="post-nav" aria-label="Post navigation">
+      <a href="post3.html">⬅️ Previous: Reflections on Life</a>
+      <a href="post2.html">Next: Learning to Code ➡️</a>
+    </nav>
+
     <p><a href="posts.html">⬅ Back to Blog</a></p>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Sammy Writes</p>
   </footer>
+
+  <!-- Back-to-top button -->
+  <button id="backToTop" aria-label="Back to Top">↑</button>
 
   <script src="script.js"></script>
 </body>

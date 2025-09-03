@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sammy Writes</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<!-- start with pink mode -->
 <body class="pink-mode">
-  <header>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading magic... ✨</p>
+  </div>
+
+  <header role="banner">
     <h1>Sammy Writes ✨</h1>
 
-    <!-- Hamburger menu button -->
-    <button id="menuToggle">☰</button>
+    <!-- Hamburger menu -->
+    <button id="menuToggle" aria-label="Menu">☰</button>
 
     <!-- Navigation links -->
-    <nav id="navLinks">
+    <nav id="navLinks" role="navigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="posts.html">Blog</a>
     </nav>
 
-    <!-- Theme switch button -->
+    <!-- Floating theme button -->
+    <button id="themeBtn" class="theme-toggle" aria-label="Switch Theme">🎨</button>
   </header>
 
-  <main>
+  <!-- Hero section -->
+  <section class="hero">
     <h2>Hi Besties 💖😊</h2>
-    <p>This is my first website, built from scratch yay! More posts coming soon... Stay tuned!</p>
+    <p>Welcome to <strong>Sammy Writes</strong> , a space where I share my coding chaos, life reflections, and creative rambles.  
+    Grab a coffee ☕, stay a while 🌸.</p>
+  </section>
 
-    <button id="surpriseBtn">Click me</button>
+  <!-- Quick links -->
+  <section class="quick-links">
+    <a href="about.html" class="card">🌟 About Me</a>
+    <a href="posts.html" class="card">📝 Blog Posts</a>
+    <a href="post1.html" class="card">✨ First Post</a>
+  </section>
+
+  <!-- Surprise facts -->
+  <section class="fun-facts">
+    <h3>🎉 Fun Corner</h3>
+    <button id="surpriseBtn">Tell me something cool</button>
     <p id="message"></p>
-  </main>
+  </section>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Sammy Writes</p>
   </footer>
 
+  <!-- Back-to-top button -->
+  <button id="backToTop" aria-label="Back to Top">↑</button>
+
   <script src="script.js"></script>
-  <button id="themeBtn">Switch Theme</button>
 </body>
 </html>

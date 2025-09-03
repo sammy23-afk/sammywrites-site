@@ -8,22 +8,28 @@
 </head>
 
 <body class="pink-mode">
-  <header>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading reflections... 🌸</p>
+  </div>
+
+  <header role="banner">
     <!-- Site title -->
     <h1>Sammy Writes ✨</h1>
 
     <!-- Hamburger menu -->
-    <button id="menuToggle">☰</button>
+    <button id="menuToggle" aria-label="Menu">☰</button>
 
     <!-- Navigation links -->
-    <nav id="navLinks">
+    <nav id="navLinks" role="navigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="posts.html">Blog</a>
     </nav>
 
     <!-- Theme switch button -->
-    <button id="themeBtn">Switch Theme</button>
+    <button id="themeBtn" class="theme-toggle" aria-label="Switch Theme">🎨</button>
   </header>
 
   <!-- Banner for Post 3 -->
@@ -32,9 +38,9 @@
     <p>Little lessons from coding, chaos, and creativity ✨</p>
   </div>
 
-  <main>
+  <main role="main">
     <article class="post3-article">
-      <img src="https://picsum.photos/700/300?random=3" alt="reflective sky">
+      <img src="https://picsum.photos/700/300?random=3" alt="Reflective sky at dusk">
 
       <p>Sometimes I get stuck in my head 🤯 between code, classes, and life being messy. But then I remind myself: I&apos;m here, I&apos;m creating, and that matters 💖.</p>
 
@@ -47,12 +53,21 @@
       <p>Life&apos;s messy. But so am I. And that&apos;s kinda the fun of it 😅.</p>
     </article>
 
+    <!-- Post navigation -->
+    <nav class="post-nav" aria-label="Post navigation">
+      <a href="post2.html">⬅️ Previous: Learning to Code</a>
+      <a href="post1.html">Next: My First Thoughts ➡️</a>
+    </nav>
+
     <p><a href="posts.html">⬅️ Back to Blog</a></p>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Sammy Writes</p>
   </footer>
+
+  <!-- Back-to-top button -->
+  <button id="backToTop" aria-label="Back to Top">↑</button>
 
   <script src="script.js"></script>
 </body>

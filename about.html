@@ -8,34 +8,70 @@
 </head>
 
 <body class="pink-mode">
-  <header>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading About Me... 🌸</p>
+  </div>
+
+  <header role="banner">
     <!-- Site title -->
     <h1>Sammy Writes ✨</h1>
 
     <!-- Hamburger menu -->
-    <button id="menuToggle">☰</button>
+    <button id="menuToggle" aria-label="Menu">☰</button>
 
     <!-- Navigation links -->
-    <nav id="navLinks">
+    <nav id="navLinks" role="navigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html" aria-current="page">About</a>
       <a href="posts.html">Blog</a>
     </nav>
 
-    <!-- Theme switch button -->
-    <button id="themeBtn">Switch Theme</button>
+    <!-- Floating theme button -->
+    <button id="themeBtn" class="theme-toggle" aria-label="Switch Theme">🎨</button>
   </header>
 
-  <main>
-    <h2>Hi there 👋 I&apos;m Sammy</h2>
-    <p>Welcome to my little corner of the web. I made this site from scratch to share my thoughts, ideas, and writing. It&apos;s a space for me to express, reflect, and connect 💖.</p>
-    <p>I&apos;m someone who finds joy in creating — whether that&apos;s words, small projects, or just documenting the journey 🌸.</p>
-    <p>Stick around and you&apos;ll find posts about life, growth, creativity, and the messy-but-beautiful process of figuring things out ✨🌈.</p>
+  <!-- Banner -->
+  <div class="post1-banner">
+    <h1>🌟 About Me 🌟</h1>
+    <p>A little intro, from me to you 💖</p>
+  </div>
+
+  <main role="main">
+    <section class="about-card">
+      <h2>Hi there 👋 I&apos;m Sammy</h2>
+      <p>
+        Welcome to my little corner of the web. I built this site from scratch to share my
+        thoughts, ideas, and writing. It&apos;s a space for me to express, reflect, and connect 🌸.
+      </p>
+    </section>
+
+    <section class="about-card">
+      <h2>What I Love 💡</h2>
+      <ul>
+        <li>📝 Writing & journaling</li>
+        <li>💻 Coding & learning new tech</li>
+        <li>🌈 Exploring creativity & self-expression</li>
+        <li>☕ Coffee (a lot of it!)</li>
+      </ul>
+    </section>
+
+    <section class="about-card">
+      <h2>What You&apos;ll Find Here ✨</h2>
+      <p>
+        Stick around and you&apos;ll find posts about life, growth, creativity, and the
+        messy-but-beautiful process of figuring things out 💖.
+      </p>
+    </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Sammy Writes</p>
   </footer>
+
+  <!-- Back-to-top button -->
+  <button id="backToTop" aria-label="Back to Top">↑</button>
 
   <script src="script.js"></script>
 </body>

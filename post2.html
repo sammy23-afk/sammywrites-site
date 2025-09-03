@@ -8,22 +8,28 @@
 </head>
 
 <body class="pink-mode">
-  <header>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading code chaos... 💻</p>
+  </div>
+
+  <header role="banner">
     <!-- Site title -->
     <h1>Sammy Writes ✨</h1>
 
     <!-- Hamburger menu -->
-    <button id="menuToggle">☰</button>
+    <button id="menuToggle" aria-label="Menu">☰</button>
 
     <!-- Navigation links -->
-    <nav id="navLinks">
+    <nav id="navLinks" role="navigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="posts.html">Blog</a>
     </nav>
 
     <!-- Theme switch button -->
-    <button id="themeBtn">Switch Theme</button>
+    <button id="themeBtn" class="theme-toggle" aria-label="Switch Theme">🎨</button>
   </header>
 
   <!-- Banner for Post 2 -->
@@ -32,9 +38,9 @@
     <p>Chaos, coffee, and curly braces {} 😅</p>
   </div>
 
-  <main>
+  <main role="main">
     <article class="post2-article">
-      <img src="https://picsum.photos/700/300?random=2" alt="coding vibes">
+      <img src="https://picsum.photos/700/300?random=2" alt="Laptop screen with code and coffee beside it">
 
       <p>Here is the truth: coding is like dating. At first, everything is confusing, you overthink every move, and Google becomes your therapist 😊.</p>
 
@@ -53,12 +59,21 @@
       <p>I am not perfect, but I am consistent. And honestly? That is how people win at this game 🏆.</p>
     </article>
 
+    <!-- Post navigation -->
+    <nav class="post-nav" aria-label="Post navigation">
+      <a href="post1.html">⬅️ Previous: My First Thoughts</a>
+      <a href="post3.html">Next: Reflections on Life ➡️</a>
+    </nav>
+
     <p><a href="posts.html">⬅ Back to Blog</a></p>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Sammy Writes</p>
   </footer>
+
+  <!-- Back-to-top button -->
+  <button id="backToTop" aria-label="Back to Top">↑</button>
 
   <script src="script.js"></script>
 </body>
