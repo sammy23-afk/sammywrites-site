@@ -20,27 +20,24 @@ if (button) {
     });
 }
 
-// Theme switcher: Pink → Navy → Normal
+// Theme switcher with multiple themes
 const themeBtn = document.getElementById("themeBtn");
+const themes = ["pink-mode", "navy-mode", "dark-mode", "pastel-mode"];
+let currentTheme = 0;
 
 if (themeBtn) {
   themeBtn.addEventListener("click", function() {
-    if (document.body.classList.contains("pink-mode")) {
-      // switch to navy
-      document.body.classList.remove("pink-mode");
-      document.body.classList.add("navy-mode");
-      themeBtn.textContent = "Switch to Normal";
-    } else if (document.body.classList.contains("navy-mode")) {
-      // switch to normal
-      document.body.classList.remove("navy-mode");
-      themeBtn.textContent = "Switch to Pink";
-    } else {
-      // switch to pink
-      document.body.classList.add("pink-mode");
-      themeBtn.textContent = "Switch to Navy";
-    }
+    // remove current theme class
+    document.body.classList.remove(themes[currentTheme]);
+
+    // move to next theme
+    currentTheme = (currentTheme + 1) % themes.length;
+
+    // apply new theme
+    document.body.classList.add(themes[currentTheme]);
   });
 }
+
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("show");
