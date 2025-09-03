@@ -1,5 +1,248 @@
-/* Default (desktop/tablet) */
-.theme-toggle {
+/* ---------- Base Styling ---------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #333;
+    transition: background 0.5s ease, color 0.5s ease;
+  }
+  
+  header {
+    background: #222;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  nav a:hover {
+    color: #ff66b2;
+    transform: scale(1.1);
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+  }
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  button:hover {
+    background: #444;
+    transform: translateY(-2px);
+  }
+  
+  a {
+    color: #cc0066;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    padding: 15px;
+    background: #eee;
+  }
+  
+  /* ---------- Loader ---------- */
+  #loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #ffe6f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+  .spinner {
+    width: 50px; height: 50px;
+    border: 6px solid #ddd;
+    border-top: 6px solid #ff66b2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  #loader.fade-out {
+    animation: fadeOut 0.6s ease forwards;
+  }
+  @keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+  }
+  
+  /* ---------- Theme Modes ---------- */
+  .pink-mode {
+    background-color: #ffe6f2 !important;
+    color: #4a0033 !important;
+  }
+  .pink-mode header { background: #ff99cc !important; }
+  .pink-mode button { background: #4a0033 !important; color: white !important; }
+  
+  .navy-mode {
+    background-color: #001f3f !important;
+    color: #f0f8ff !important;
+  }
+  .navy-mode header { background: #001530 !important; }
+  .navy-mode button { background: #f0f8ff !important; color: #001f3f !important; }
+  
+  .dark-mode {
+    background-color: #111 !important;
+    color: #eee !important;
+  }
+  .dark-mode header { background: #000 !important; }
+  .dark-mode button { background: #444 !important; color: white !important; }
+  
+  .pastel-mode {
+    background-color: #fef9e7 !important;
+    color: #6c3483 !important;
+  }
+  .pastel-mode header { background: #fad7a0 !important; }
+  .pastel-mode button { background: #6c3483 !important; color: white !important; }
+  
+  .high-contrast-mode {
+    background: black !important;
+    color: yellow !important;
+  }
+  .high-contrast-mode header { background: black !important; }
+  .high-contrast-mode button { background: yellow !important; color: black !important; }
+  
+  /* ---------- Articles ---------- */
+  article {
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    margin: auto;
+    background: white;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  article.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  article img {
+    display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+    max-width: 100%;
+  }
+  blockquote {
+    border-left: 4px solid #ff66b2;
+    padding-left: 12px;
+    font-style: italic;
+    margin: 20px 0;
+    border-radius: 6px;
+    position: relative;
+    background: #ffe6f2;
+  }
+  .copy-quote {
+    position: absolute;
+    top: 5px; right: 10px;
+    background: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    display: none;
+  }
+  blockquote:hover .copy-quote { display: inline-block; }
+  
+  /* ---------- Hero + Cards ---------- */
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  .quick-links {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin: 20px 0;
+  }
+  .card {
+    background: #fff0f6;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  
+  /* ---------- Search Bar ---------- */
+  #searchBar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid #ff99cc;
+    margin: 15px 0;
+    font-size: 1rem;
+  }
+  #searchBar:focus {
+    outline: none;
+    border-color: #ff66b2;
+    box-shadow: 0 0 8px rgba(255, 102, 178, 0.6);
+  }
+  
+  /* ---------- Progress Bar ---------- */
+  #progressBar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 5px;
+    background: #ff66b2;
+    width: 0%;
+    z-index: 3000;
+  }
+  
+  /* ---------- Floating Buttons ---------- */
+  .theme-toggle {
     position: fixed;
     top: 50%;
     right: 15px;
@@ -12,23 +255,53 @@
     font-size: 1.2rem;
     cursor: pointer;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: background 0.3s ease, transform 0.2s ease;
   }
   .theme-toggle:hover {
     background: #ff66b2;
     transform: rotate(15deg);
   }
   
-  /* Mobile: move button to bottom-right */
+  #backToTop {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    background: #4a0033;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+  }
+  #backToTop.show { display: block; }
+  #backToTop:hover { background: #ff66b2; }
+  
+  /* ---------- Typing Effect ---------- */
+  .typing {
+    border-right: 3px solid #ff66b2;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 0;
+    animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
+  }
+  @keyframes typing {
+    to { width: 100%; }
+  }
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  /* ---------- Mobile ---------- */
   @media (max-width: 768px) {
     .theme-toggle {
       top: auto;
-      bottom: 20px;
+      bottom: 70px;
       right: 20px;
       transform: none;
       font-size: 1rem;
-      padding: 10px 12px;
+      padding: 10px;
     }
   }
   

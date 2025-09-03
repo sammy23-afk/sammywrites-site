@@ -8,60 +8,39 @@
 </head>
 
 <body class="pink-mode">
-  <!-- Loader -->
   <div id="loader">
     <div class="spinner"></div>
-    <p>Loading Sammy’s world... ✨</p>
+    <p>Loading blog posts... 📝</p>
   </div>
 
-  <header role="banner">
-    <!-- Site title -->
+  <header>
     <h1>Sammy Writes ✨</h1>
-
-    <!-- Hamburger menu -->
-    <button id="menuToggle" aria-label="Menu">☰</button>
-
-    <!-- Navigation links -->
-    <nav id="navLinks" role="navigation" aria-label="Main navigation">
+    <button id="menuToggle">☰</button>
+    <nav id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="posts.html">Blog</a>
     </nav>
-
-    <!-- Theme switch button -->
-    <button id="themeBtn" class="theme-toggle" aria-label="Switch Theme">🎨</button>
+    <button id="themeBtn" class="theme-toggle">🎨</button>
   </header>
 
-  <main role="main">
+  <main>
     <h2>📝 Latest Posts 🌞</h2>
 
-    <!-- Search bar -->
-    <input type="text" id="searchBar" placeholder="Search posts..." aria-label="Search posts">
+    <input type="text" id="searchBar" placeholder="Search posts...">
 
-    <!-- Post list -->
     <ul class="post-list" id="postList">
-      <li><a href="post1.html">Post 1: My first thoughts 😊</a></li>
-      <li><a href="post2.html">Post 2: Learning to code 💻</a></li>
-      <li><a href="post3.html">Post 3: Reflections on life 🌈</a></li>
+      <li><a href="post1.html">✨ Post 1: My first thoughts 😊</a></li>
+      <li><a href="post2.html">🚀 Post 2: Learning to code 💻</a></li>
+      <li><a href="post3.html">🌸 Post 3: Reflections on life 🌈</a></li>
     </ul>
-
-    <p>More posts coming soon... ⏳</p>
-
-    <!-- Surprise facts section -->
-    <section aria-labelledby="funFacts">
-      <h3 id="funFacts">🎉 Fun Corner</h3>
-      <button id="surpriseBtn">Tell me something cool</button>
-      <p id="message"></p>
-    </section>
   </main>
 
-  <footer role="contentinfo">
+  <footer>
     <p>&copy; 2025 Sammy Writes</p>
   </footer>
 
-  <!-- Back-to-top button -->
-  <button id="backToTop" aria-label="Back to Top">↑</button>
-
+  <button id="backToTop">↑</button>
   <script src="script.js"></script>
 </body>
 </html>

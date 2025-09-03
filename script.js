@@ -1,129 +1,107 @@
-// ---------- Surprise message ----------
-const button = document.getElementById("surpriseBtn");
-const message = document.getElementById("message");
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-const themeBtn = document.getElementById("themeBtn");
-const backToTop = document.getElementById("backToTop");
-const loader = document.getElementById("loader");
-const searchBar = document.getElementById("searchBar");
-const postList = document.getElementById("postList");
+// Loader fade-out
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  if (loader) setTimeout(() => loader.classList.add("fade-out"), 800);
+});
 
-if (button) {
-  const facts = [
-    "Did you know? Honey never spoils — archaeologists found 3000-year-old pots still edible 🍯",
-    "Did you know? Octopuses have three hearts and blue blood 🐙",
-    "Bananas are berries, but strawberries aren’t 🍌 🍓",
-    "Your stomach gets a new lining every 3–4 days 🔄",
-    "Some cats are allergic to humans 🐱",
-    "The first computer bug was an actual moth 🦋",
-    "Bonus fact: You’re cooler than you think 😎"
-  ];
-  button.addEventListener("click", function() {
+// Surprise facts
+const facts = [
+  "Did you know? Honey never spoils 🍯",
+  "Octopuses have three hearts 🐙",
+  "Bananas are berries, strawberries aren’t 🍌 🍓",
+  "Your stomach gets a new lining every 3–4 days 🔄",
+  "Some cats are allergic to humans 🐱",
+  "The first computer bug was a moth 🦋"
+];
+const btn = document.getElementById("surpriseBtn");
+if (btn) {
+  btn.addEventListener("click", () => {
     const randomFact = facts[Math.floor(Math.random() * facts.length)];
-    message.innerHTML = randomFact;
+    document.getElementById("message").innerHTML = randomFact;
   });
 }
 
-// ---------- Theme switcher ----------
+// Theme switcher
 const themes = ["pink-mode", "navy-mode", "dark-mode", "pastel-mode", "high-contrast-mode"];
 let currentTheme = 0;
-let themeClicks = 0;
+const themeBtn = document.getElementById("themeBtn");
 
 // Load saved theme
 if (localStorage.getItem("theme")) {
-  document.body.classList.add(localStorage.getItem("theme"));
+  document.body.className = localStorage.getItem("theme");
   currentTheme = themes.indexOf(localStorage.getItem("theme"));
 }
 
 if (themeBtn) {
-  themeBtn.addEventListener("click", function() {
+  themeBtn.addEventListener("click", () => {
     document.body.classList.remove(themes[currentTheme]);
     currentTheme = (currentTheme + 1) % themes.length;
     document.body.classList.add(themes[currentTheme]);
     localStorage.setItem("theme", themes[currentTheme]);
-
-    // easter egg shuffle if button spammed 5x
-    themeClicks++;
-    if (themeClicks >= 5) {
-      themeClicks = 0;
-      const randomTheme = themes[Math.floor(Math.random() * themes.length)];
-      document.body.className = randomTheme;
-      localStorage.setItem("theme", randomTheme);
-      alert("🎉 Random Theme Shuffle Activated!");
-    }
   });
 }
 
-// ---------- Mobile menu toggle ----------
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-}
-
-// ---------- Back to top ----------
+// Back-to-top button
+const backToTop = document.getElementById("backToTop");
 if (backToTop) {
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      backToTop.classList.add("show");
-    } else {
-      backToTop.classList.remove("show");
-    }
+    backToTop.classList.toggle("show", window.scrollY > 200);
   });
   backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
-// ---------- Article fade-in ----------
-const articles = document.querySelectorAll("article");
+// Mobile menu
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => navLinks.classList.toggle("show"));
+}
+
+// Search filter
+const searchBar = document.getElementById("searchBar");
+const postList = document.getElementById("postList");
+if (searchBar && postList) {
+  searchBar.addEventListener("input", () => {
+    const query = searchBar.value.toLowerCase();
+    Array.from(postList.getElementsByTagName("li")).forEach(item => {
+      item.style.display = item.textContent.toLowerCase().includes(query) ? "" : "none";
+    });
+  });
+}
+
+// Scroll reveal
 function revealOnScroll() {
-  articles.forEach(article => {
-    const rect = article.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      article.classList.add("show");
+  document.querySelectorAll("article, .card, section").forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add("show");
     }
   });
 }
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-// ---------- Loader fade-out ----------
-window.addEventListener("load", () => {
-  if (loader) {
-    setTimeout(() => {
-      loader.classList.add("fade-out");
-    }, 800); // small delay for effect
-  }
-});
-
-// ---------- Search filter ----------
-if (searchBar && postList) {
-  searchBar.addEventListener("input", () => {
-    const query = searchBar.value.toLowerCase();
-    const items = postList.getElementsByTagName("li");
-
-    Array.from(items).forEach(item => {
-      const text = item.textContent.toLowerCase();
-      if (text.includes(query)) {
-        item.style.display = "";
-      } else {
-        item.style.display = "none";
-      }
-    });
+// Progress bar
+const progressBar = document.getElementById("progressBar");
+if (progressBar) {
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    progressBar.style.width = progress + "%";
   });
 }
 
-// ---------- Keyboard shortcuts ----------
-document.addEventListener("keydown", (e) => {
-  if (e.key.toLowerCase() === "t" && themeBtn) {
-    themeBtn.click(); // switch theme
-  }
-  if (e.key.toLowerCase() === "m" && menuToggle) {
-    menuToggle.click(); // toggle menu
-  }
-  if (e.key.toLowerCase() === "b" && backToTop) {
-    backToTop.click(); // jump to top
-  }
+// Copy quotes
+document.querySelectorAll("blockquote").forEach(block => {
+  const btn = document.createElement("button");
+  btn.className = "copy-quote";
+  btn.textContent = "📋 Copy";
+  block.appendChild(btn);
+  btn.addEventListener("click", () => {
+    navigator.clipboard.writeText(block.innerText);
+    btn.textContent = "✅ Copied!";
+    setTimeout(() => (btn.textContent = "📋 Copy"), 1500);
+  });
 });
