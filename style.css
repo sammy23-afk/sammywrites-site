@@ -222,3 +222,51 @@ button {
     padding: 12px;
 }
 }
+/* Hide hamburger by default */
+#menuToggle {
+display: none;
+background: #4a0033;
+color: white;
+border: none;
+font-size: 1.5rem;
+padding: 5px 10px;
+border-radius: 6px;
+cursor: pointer;
+}
+
+/* Smooth link animations */
+nav a {
+transition: color 0.3s ease, transform 0.2s ease;
+}
+nav a:hover {
+color: #ff66b2;
+transform: scale(1.1);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+nav {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    background: #ff99cc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+nav.show {
+    display: flex;
+}
+#menuToggle {
+    display: inline-block;
+    margin-top: 10px;
+}
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(-10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+  

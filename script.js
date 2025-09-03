@@ -1,6 +1,8 @@
 // Surprise message
 const button = document.getElementById("surpriseBtn");
 const message = document.getElementById("message");
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
 if (button) {
     const facts = [
@@ -39,3 +41,9 @@ if (themeBtn) {
     }
   });
 }
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+}
+
