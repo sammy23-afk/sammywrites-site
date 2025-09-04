@@ -5,59 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sammy Writes ✨</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+<body>
 
-<body class="pink-mode">
-  <!-- Loader -->
-  <div id="loader">
-    <div class="spinner"></div>
-    <p>Loading magic... ✨</p>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="top-left">📧 sammy@example.com</div>
+    <div class="top-right">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
   </div>
 
-  <!-- Header -->
-  <header>
-    <h1>Sammy Writes ✨</h1>
-    <button id="menuToggle">☰</button>
-    <nav id="navLinks">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="posts.html">Blog</a>
-    </nav>
-    <button id="themeBtn" class="theme-toggle" aria-label="Switch theme">🎨</button>
-  </header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Sammy Writes ✨</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">☰</div>
+  </nav>
 
   <!-- Hero -->
-  <section class="hero-banner">
-    <h2>Hi Besties 💖😊</h2>
-    <p class="typing">Welcome to <strong>Sammy Writes</strong> — a space where I share my coding chaos, life reflections, and creative rambles. Grab a coffee ☕ and stay a while 🌸.</p>
-  </section>
+  <header class="hero">
+    <h1>Hey Besties 💖 <br> Welcome to <span>Sammy Writes</span></h1>
+    <p>Coding chaos, life reflections & creative rambles ✨ Grab a ☕ and vibe with me.</p>
+    <a href="blog.html" class="btn">Explore Blog 🚀</a>
+  </header>
 
-  <!-- Quick Links -->
-  <section class="quick-links">
-    <h3>✨ Explore</h3>
-    <div class="links-grid">
-      <a href="about.html" class="card">🌟 About Me</a>
-      <a href="posts.html" class="card">📝 Blog Posts</a>
-      <a href="post1.html" class="card">✨ First Post</a>
+  <!-- Explore Section -->
+  <section class="card-container">
+    <div class="card">
+      <h3>📖 Blog</h3>
+      <p>Read my thoughts on coding, growth, and authenticity.</p>
+      <a href="blog.html" class="btn">Dive In</a>
+    </div>
+    <div class="card">
+      <h3>💡 Projects</h3>
+      <p>Check out cool things I have built & created along the way.</p>
+      <a href="projects.html" class="btn">See Work</a>
+    </div>
+    <div class="card">
+      <h3>📬 Contact</h3>
+      <p>Let us connect — I would love to hear from you!</p>
+      <a href="contact.html" class="btn">Say Hi</a>
     </div>
   </section>
 
-  <!-- Fun Corner -->
-  <section class="fun-facts">
-    <h3>🎉 Fun Corner</h3>
-    <button id="surpriseBtn" class="btn">Tell me something cool</button>
-    <p id="message"></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Sammy Writes. All rights reserved.</p>
-  </footer>
-
-  <!-- Back to Top -->
-  <button id="backToTop">↑</button>
-
-  <!-- Scripts -->
+  <footer>© 2025 Sammy. All rights reserved.</footer>
   <script src="script.js"></script>
 </body>
 </html>
