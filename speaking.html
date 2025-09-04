@@ -8,9 +8,16 @@
 </head>
 
 <body class="pink-mode">
-  <div id="loader"><div class="spinner"></div><p>Loading reflections... 🎤</p></div>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading reflections... 🎤</p>
+  </div>
+
+  <!-- Progress Bar -->
   <div id="progressBar"></div>
 
+  <!-- Header -->
   <header>
     <h1>Sammy Writes ✨</h1>
     <button id="menuToggle">☰</button>
@@ -26,7 +33,7 @@
       <a href="post4.html">💖 Authenticity</a>
       <a href="resources.html">📚 Resources</a>
       <a href="projects.html">🎨 Projects</a>
-      <a href="speaking.html">🎤 Speaking</a>
+      <a href="speaking.html" class="active">🎤 Speaking</a>
       <a href="contact.html">📬 Contact</a>
       <hr>
       <button id="increaseFont">A+</button>
@@ -40,19 +47,42 @@
   <!-- Banner -->
   <div class="post3-banner">
     <h1>🎤 Speaking & Writing 🎤</h1>
-    <p>Ideas I share, words I stand by 🌟</p>
+    <p>Ideas I share, words I live by 🌟</p>
   </div>
 
+  <!-- Main Content -->
   <main>
     <article class="post3-article">
-      <p>For me, speaking is not about having all the answers. It is about putting words to the thoughts, lessons, and little truths I collect along the way. Sometimes it comes from coding chaos, other times from life’s curveballs, or just late-night reflections.</p>
+      <p>
+        Speaking and writing, for me, are less about having the perfect answers and more about giving shape to the thoughts and lessons gathered along the way. 
+        Sometimes they come from the chaos of coding, sometimes from the curveballs of life, and often from quiet, late-night reflections.
+      </p>
 
-      <p>This page is a space where I imagine standing in front of a room. Not to lecture, but to connect. To talk about resilience, growth, and the small ways we learn to keep moving forward.</p>
+      <p>
+        This page is where I imagine standing in front of a room — not to lecture, but to connect. To share stories of resilience, moments of growth, and the everyday ways we keep moving forward. 
+      </p>
 
       <blockquote>
-        “Sharing your story is an act of courage. Listening is an act of love.”
+        "Sharing your story is an act of courage. Listening is an act of love."
       </blockquote>
 
       <h2>✨ What I Speak & Write About</h2>
-      <ul>
-        <li>🌟
+      <ul class="speak-list">
+        <li>🌱 Growth through challenges</li>
+        <li>💡 Lessons from coding & creativity</li>
+        <li>🌍 Authentic living in a noisy world</li>
+        <li>🤝 Building resilience and connection</li>
+        <li>📖 Stories that remind us we’re not alone</li>
+      </ul>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sammy. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

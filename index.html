@@ -14,42 +14,50 @@
     <p>Loading magic... ✨</p>
   </div>
 
+  <!-- Header -->
   <header>
     <h1>Sammy Writes ✨</h1>
     <button id="menuToggle">☰</button>
     <nav id="navLinks">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="posts.html">Blog</a>
     </nav>
-    <button id="themeBtn" class="theme-toggle">🎨</button>
+    <button id="themeBtn" class="theme-toggle" aria-label="Switch theme">🎨</button>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero-banner">
     <h2>Hi Besties 💖😊</h2>
     <p class="typing">Welcome to <strong>Sammy Writes</strong> — a space where I share my coding chaos, life reflections, and creative rambles. Grab a coffee ☕ and stay a while 🌸.</p>
   </section>
 
-  <!-- Quick links -->
+  <!-- Quick Links -->
   <section class="quick-links">
-    <a href="about.html" class="card">🌟 About Me</a>
-    <a href="posts.html" class="card">📝 Blog Posts</a>
-    <a href="post1.html" class="card">✨ First Post</a>
+    <h3>✨ Explore</h3>
+    <div class="links-grid">
+      <a href="about.html" class="card">🌟 About Me</a>
+      <a href="posts.html" class="card">📝 Blog Posts</a>
+      <a href="post1.html" class="card">✨ First Post</a>
+    </div>
   </section>
 
   <!-- Fun Corner -->
   <section class="fun-facts">
     <h3>🎉 Fun Corner</h3>
-    <button id="surpriseBtn">Tell me something cool</button>
+    <button id="surpriseBtn" class="btn">Tell me something cool</button>
     <p id="message"></p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Sammy Writes</p>
+    <p>&copy; 2025 Sammy Writes. All rights reserved.</p>
   </footer>
 
+  <!-- Back to Top -->
   <button id="backToTop">↑</button>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>

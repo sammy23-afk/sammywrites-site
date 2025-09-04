@@ -1,81 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Sammy Writes</title>
-  <link rel="stylesheet" href="style.css">
+  <title>About | Sammy</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body class="pink-mode">
-  <!-- Loader -->
-  <div id="loader"><div class="spinner"></div><p>Loading About Me... 🌸</p></div>
-  <div id="progressBar"></div>
+  <!-- Sidebar Navigation -->
+  <nav id="sidebar" class="sidebar" aria-label="Main Navigation">
+    <button id="menuToggle" aria-label="Toggle menu">☰</button>
+    <ul id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="extras">
+      <input type="search" placeholder="Search..." aria-label="Search site">
+      <div class="breadcrumbs">Home / About</div>
+    </div>
+  </nav>
 
-  <!-- Header -->
-  <header>
-    <h1>Sammy Writes ✨</h1>
-    <button id="menuToggle">☰</button>
-  </header>
-
-  <!-- Side Menu -->
-  <aside id="sideMenu">
-    <button id="closeMenu">✕</button>
-    <nav>
-      <a href="index.html">🏠 Home</a>
-      <a href="about.html">🌟 About</a>
-      <a href="posts.html">📝 Blog</a>
-      <a href="post4.html">💖 Authenticity</a>
-      <a href="resources.html">📚 Resources</a>
-      <a href="projects.html">🎨 Projects</a>
-      <a href="speaking.html">🎤 Speaking</a>
-      <a href="contact.html">📬 Contact</a>
-      <hr>
-      <button id="increaseFont">A+</button>
-      <button id="resetFont">A</button>
-      <button id="decreaseFont">A-</button>
-      <button id="contrastToggle">♿ High Contrast</button>
-    </nav>
-  </aside>
-  <div id="overlay"></div>
-
-  <!-- Banner -->
-  <div class="post1-banner">
-    <h1>🌟 About Me 🌟</h1>
-    <p>A little intro, from me to you 💖</p>
+  <!-- Theme Switcher -->
+  <div id="themeSwitcher" class="theme-switcher">
+    <button data-theme="light" aria-label="Switch to light theme">🌞</button>
+    <button data-theme="dark" aria-label="Switch to dark theme">🌙</button>
+    <button data-theme="blue" aria-label="Switch to blue theme">🔵</button>
   </div>
 
-  <!-- Main -->
-  <main>
-    <section class="about-card profile">
-      <!-- Replace the src with your actual file path -->
-      <img src="img/profile.jpg" alt="Photo of Sammy" class="profile-pic">
-      <h2>Hi there 👋 I&apos;m Sammy</h2>
-      <p>Welcome to my little corner of the web. I built this site from scratch to share my thoughts, ideas, and writing. 🌸</p>
-    </section>
-
-    <section class="about-card">
-      <h2>What I Love 💡</h2>
-      <ul>
-        <li>📝 Writing & journaling</li>
-        <li>💻 Coding & learning new tech</li>
-        <li>🌈 Creativity & self-expression</li>
-        <li>☕ Coffee (a lot of it!)</li>
-      </ul>
-    </section>
-
-    <section class="about-card">
-      <h2>What You&apos;ll Find Here ✨</h2>
-      <p>
-        This site is a space for me to share my learning journey, creative projects, and personal reflections. 
-        You&apos;ll find posts about life, growth, creativity, and the messy but beautiful process of figuring things out 💖.
-      </p>
-    </section>
+  <!-- About Section -->
+  <main class="about">
+    <h1>About Me</h1>
+    <div class="about-content">
+      <div class="about-photo">
+        <img src="assets/sammy.jpg" alt="Photo of Sammy" />
+      </div>
+      <div class="about-text">
+        <h2>Hi, I’m Sammy</h2>
+        <p>
+          I believe in authenticity and living in alignment with my values.  
+          My journey so far has been about growth, learning, and choosing to  
+          show up as my truest self. For me, authenticity means being  
+          unapologetically real, whether in my work, relationships, or creativity.
+        </p>
+        <p>
+          This site is where I share my projects, thoughts, and the things I care  
+          about most. My goal is to create work that feels meaningful and  
+          accessible while staying true to who I am.
+        </p>
+        <blockquote>
+          “Authenticity isn’t about being perfect.  
+          It’s about being real, and that’s always enough.”
+        </blockquote>
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer><p>&copy; 2025 Sammy Writes</p></footer>
-  <button id="backToTop">↑</button>
+  <footer>
+    <p>&copy; 2025 Sammy. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>

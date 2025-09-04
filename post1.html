@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Post 1 - Sammy Writes</title>
+  <title>My First Thoughts - Sammy Writes</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,53 +17,69 @@
   <!-- Progress Bar -->
   <div id="progressBar"></div>
 
+  <!-- Header -->
   <header>
     <h1>Sammy Writes ✨</h1>
     <button id="menuToggle">☰</button>
     <nav id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="posts.html">Blog</a>
+      <a href="posts.html" class="active">Blog</a>
     </nav>
     <button id="themeBtn" class="theme-toggle">🎨</button>
   </header>
 
   <!-- Banner -->
-  <div class="post1-banner">
+  <div class="post-banner">
     <h1>✨ My First Thoughts ✨</h1>
     <p>That moment when code finally works 🎉</p>
   </div>
 
+  <!-- Main -->
   <main>
-    <article class="post1-article">
-      <img src="https://picsum.photos/700/300?random=1" alt="Celebrating first website launch">
+    <article class="blog-article">
+      <img src="https://picsum.photos/800/350?random=1" alt="Celebrating first website launch" class="post-image">
 
-      <p>Today I launched my very first website from scratch 🎊.  
-      Not Wix, not WordPress, but actual <code>&lt;html&gt;</code>, <code>&lt;css&gt;</code>, and some JavaScript magic. Honestly? It feels like watching a dream turn real on screen.</p>
+      <p>
+        Today I launched my very first website from scratch 🎊.  
+        Not Wix, not WordPress, but actual <code>&lt;html&gt;</code>, <code>&lt;css&gt;</code>, 
+        and some JavaScript magic. Honestly? It feels like watching a dream turn real on screen.
+      </p>
 
-      <p>It feels like I just unlocked a secret level in life 🎮. But also, lowkey like when you water a plant and suddenly it sprouts 🌱 — that mix of surprise and pride.</p>
+      <p>
+        It feels like I just unlocked a secret level in life 🎮.  
+        But also, lowkey like when you water a plant and suddenly it sprouts 🌱 — 
+        that mix of surprise and pride.
+      </p>
 
       <blockquote>
-        “Every expert was once a beginner who did not give up.”
+        "Every expert was once a beginner who did not give up."
       </blockquote>
 
-      <p>So here’s to beginnings, chaos, and curly braces. Stick around besties, this is just the start 💖😊.</p>
+      <p>
+        So here’s to beginnings, chaos, and curly braces.  
+        Stick around besties, this is just the start 💖😊.
+      </p>
     </article>
 
     <!-- Post navigation -->
     <nav class="post-nav">
-      <a href="post3.html">⬅️ Previous: Reflections on Life</a>
-      <a href="post2.html">Next: Learning to Code ➡️</a>
+      <a href="post4.html" class="nav-btn">⬅️ Previous: On Being Authentic</a>
+      <a href="post2.html" class="nav-btn">Next: Learning to Code ➡️</a>
     </nav>
 
-    <p><a href="posts.html">⬅ Back to Blog</a></p>
+    <p class="back-link"><a href="posts.html">⬅ Back to Blog</a></p>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Sammy Writes</p>
+    <p>&copy; 2025 Sammy Writes. All rights reserved.</p>
   </footer>
 
+  <!-- Back to Top -->
   <button id="backToTop">↑</button>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>

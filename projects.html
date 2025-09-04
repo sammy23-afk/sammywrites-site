@@ -7,14 +7,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="pink-mode">
-  <div id="loader"><div class="spinner"></div><p>Loading projects... 🎨</p></div>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading projects... 🎨</p>
+  </div>
+
+  <!-- Progress Bar -->
   <div id="progressBar"></div>
 
+  <!-- Header -->
   <header>
     <h1>Sammy Writes ✨</h1>
     <button id="menuToggle">☰</button>
   </header>
 
+  <!-- Side Menu -->
   <aside id="sideMenu">
     <button id="closeMenu">✕</button>
     <nav>
@@ -23,7 +31,7 @@
       <a href="posts.html">📝 Blog</a>
       <a href="authenticity.html">💖 Authenticity</a>
       <a href="resources.html">📚 Resources</a>
-      <a href="projects.html">🎨 Projects</a>
+      <a href="projects.html" class="active">🎨 Projects</a>
       <a href="speaking.html">🎤 Speaking</a>
       <a href="contact.html">📬 Contact</a>
       <hr>
@@ -35,24 +43,45 @@
   </aside>
   <div id="overlay"></div>
 
+  <!-- Banner -->
   <div class="post3-banner">
     <h1>🎨 Projects 🎨</h1>
-    <p>Coding + creative experiments ✨</p>
+    <p>Coding meets creativity ✨</p>
   </div>
 
+  <!-- Main Content -->
   <main>
-    <article class="post3-article">
-      <ul>
-        <li><strong>💻 Queue Simulator (COMP9334)</strong> – built in C/Python</li>
-        <li><strong>🕹 Maze Solver</strong> – BFS/DFS visualised for COMP2521</li>
-        <li><strong>📸 Pink Pony Visual Diary</strong> – my own creative expression project</li>
-      </ul>
-    </article>
-    <p><a href="index.html">⬅ Back Home</a></p>
+    <section class="projects-grid">
+      <div class="project-card">
+        <h3>💻 Queue Simulator</h3>
+        <p>Discrete event simulation in C & Python (COMP9334).</p>
+      </div>
+      <div class="project-card">
+        <h3>🕹 Maze Solver</h3>
+        <p>Visualised BFS/DFS algorithm for COMP2521.</p>
+      </div>
+      <div class="project-card">
+        <h3>📸 Pink Pony Visual Diary</h3>
+        <p>A personal creative diary blending art, identity, and storytelling.</p>
+      </div>
+      <div class="project-card">
+        <h3>🌐 Portfolio Website</h3>
+        <p>The very site you’re browsing — built from scratch with love.</p>
+      </div>
+    </section>
+
+    <p class="back-link"><a href="index.html">⬅ Back Home</a></p>
   </main>
 
-  <footer><p>&copy; 2025 Sammy Writes</p></footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sammy Writes. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to Top -->
   <button id="backToTop">↑</button>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>

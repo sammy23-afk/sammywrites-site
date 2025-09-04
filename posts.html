@@ -8,41 +8,76 @@
 </head>
 
 <body class="pink-mode">
+  <!-- Loader -->
   <div id="loader">
     <div class="spinner"></div>
     <p>Loading blog posts... 📝</p>
   </div>
 
+  <!-- Header -->
   <header>
     <h1>Sammy Writes ✨</h1>
     <button id="menuToggle">☰</button>
     <nav id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="posts.html">Blog</a>
+      <a href="posts.html" class="active">Blog</a>
     </nav>
-    <button id="themeBtn" class="theme-toggle">🎨</button>
+    <button id="themeBtn" class="theme-toggle" aria-label="Change theme">🎨</button>
   </header>
 
+  <!-- Banner -->
+  <div class="blog-banner">
+    <h1>📝 Blog</h1>
+    <p>Stories, lessons, and reflections I want to share 🌟</p>
+  </div>
+
+  <!-- Main -->
   <main>
-    <h2>📝 Latest Posts 🌞</h2>
+    <section class="blog-controls">
+      <h2>Latest Posts</h2>
+      <input type="text" id="searchBar" placeholder="Search posts..." aria-label="Search blog posts">
+    </section>
 
-    <input type="text" id="searchBar" placeholder="Search posts...">
+    <section class="post-list-grid" id="postList">
+      <article class="post-card">
+        <a href="post1.html">
+          <h3>✨ Post 1: My First Thoughts 😊</h3>
+          <p>A beginning, a spark, a step into my writing journey.</p>
+        </a>
+      </article>
 
-    <ul class="post-list" id="postList">
-      <li><a href="post1.html">✨ Post 1: My first thoughts 😊</a></li>
-      <li><a href="post2.html">🚀 Post 2: Learning to code 💻</a></li>
-      <li><a href="post3.html">🌸 Post 3: Reflections on life 🌈</a></li>
-      <li><a href="post4.html">💖 Post 4: On Being Authentic</a></li>
+      <article class="post-card">
+        <a href="post2.html">
+          <h3>🚀 Post 2: Learning to Code 💻</h3>
+          <p>Notes from my journey into programming — the wins, the bugs, the late nights.</p>
+        </a>
+      </article>
 
-    </ul>
+      <article class="post-card">
+        <a href="post3.html">
+          <h3>🌸 Post 3: Reflections on Life 🌈</h3>
+          <p>Moments of growth, lessons from mistakes, and hope for what’s next.</p>
+        </a>
+      </article>
+
+      <article class="post-card">
+        <a href="post4.html">
+          <h3>💖 Post 4: On Being Authentic</h3>
+          <p>Why authenticity matters, and how I try to live by it.</p>
+        </a>
+      </article>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Sammy Writes</p>
+    <p>&copy; 2025 Sammy Writes. All rights reserved.</p>
   </footer>
 
+  <!-- Back to Top -->
   <button id="backToTop">↑</button>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Post 2 - Sammy Writes</title>
+  <title>Learning to Code - Sammy Writes</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,58 +17,73 @@
   <!-- Progress Bar -->
   <div id="progressBar"></div>
 
+  <!-- Header -->
   <header>
     <h1>Sammy Writes ✨</h1>
     <button id="menuToggle">☰</button>
     <nav id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="posts.html">Blog</a>
+      <a href="posts.html" class="active">Blog</a>
     </nav>
     <button id="themeBtn" class="theme-toggle">🎨</button>
   </header>
 
   <!-- Banner -->
-  <div class="post2-banner">
+  <div class="post-banner">
     <h1>🚀 Learning to Code 🚀</h1>
     <p>Chaos, coffee, and curly braces {} 😅</p>
   </div>
 
+  <!-- Main -->
   <main>
-    <article class="post2-article">
-      <img src="https://picsum.photos/700/300?random=2" alt="Laptop screen with code and coffee beside it">
+    <article class="blog-article">
+      <img src="https://picsum.photos/800/350?random=2" alt="Laptop screen with code and coffee beside it" class="post-image">
 
-      <p>Here is the truth: coding is like dating. At first, everything is confusing, you overthink every move, and Google becomes your therapist 😊.</p>
+      <p>
+        Here is the truth: coding is like dating. At first, everything is confusing, 
+        you overthink every move, and Google becomes your therapist 😊.
+      </p>
 
-      <p>Some days I feel like a genius, other days I forget a semicolon and my whole site collapses 💀. But that is the fun, right? Growth, chaos, and tiny wins that feel massive.</p>
+      <p>
+        Some days I feel like a genius, other days I forget a semicolon and my whole site collapses 💀.  
+        But that is the fun, right? Growth, chaos, and tiny wins that feel massive.
+      </p>
 
-      <ul>
-        <li>☕ Fuel: coffee (obviously)</li>
-        <li>💻 Tools: VS Code, a browser, and vibes</li>
-        <li>📝 Notes: Do not panic. Refresh fixes a lot.</li>
+      <ul class="post-list">
+        <li>☕ <strong>Fuel:</strong> coffee (obviously)</li>
+        <li>💻 <strong>Tools:</strong> VS Code, a browser, and vibes</li>
+        <li>📝 <strong>Notes:</strong> Do not panic. Refresh fixes a lot.</li>
       </ul>
 
       <blockquote>
-        “Code is like humor. When you have to explain it, it is bad.” 😂
+        "Code is like humor. When you have to explain it, it is bad." 😂
       </blockquote>
 
-      <p>I am not perfect, but I am consistent. And honestly? That is how people win at this game 🏆.</p>
+      <p>
+        I am not perfect, but I am consistent. And honestly?  
+        That is how people win at this game 🏆.
+      </p>
     </article>
 
     <!-- Post navigation -->
     <nav class="post-nav">
-      <a href="post1.html">⬅️ Previous: My First Thoughts</a>
-      <a href="post3.html">Next: Reflections on Life ➡️</a>
+      <a href="post1.html" class="nav-btn">⬅️ Previous: My First Thoughts</a>
+      <a href="post3.html" class="nav-btn">Next: Reflections on Life ➡️</a>
     </nav>
 
-    <p><a href="posts.html">⬅ Back to Blog</a></p>
+    <p class="back-link"><a href="posts.html">⬅ Back to Blog</a></p>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Sammy Writes</p>
+    <p>&copy; 2025 Sammy Writes. All rights reserved.</p>
   </footer>
 
+  <!-- Back to Top -->
   <button id="backToTop">↑</button>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>

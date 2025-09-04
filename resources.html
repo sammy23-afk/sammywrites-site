@@ -7,14 +7,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="pink-mode">
-  <div id="loader"><div class="spinner"></div><p>Loading resources... 📚</p></div>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading resources... 📚</p>
+  </div>
+
+  <!-- Progress Bar -->
   <div id="progressBar"></div>
 
+  <!-- Header -->
   <header>
     <h1>Sammy Writes ✨</h1>
     <button id="menuToggle">☰</button>
   </header>
 
+  <!-- Side Menu -->
   <aside id="sideMenu">
     <button id="closeMenu">✕</button>
     <nav>
@@ -22,7 +30,7 @@
       <a href="about.html">🌟 About</a>
       <a href="posts.html">📝 Blog</a>
       <a href="authenticity.html">💖 Authenticity</a>
-      <a href="resources.html">📚 Resources</a>
+      <a href="resources.html" class="active">📚 Resources</a>
       <a href="projects.html">🎨 Projects</a>
       <a href="speaking.html">🎤 Speaking</a>
       <a href="contact.html">📬 Contact</a>
@@ -35,25 +43,55 @@
   </aside>
   <div id="overlay"></div>
 
+  <!-- Banner -->
   <div class="post2-banner">
     <h1>📚 Resources 📚</h1>
-    <p>Study hacks, tools, and little gems I use ✨</p>
+    <p>Study hacks, tools, and little gems I actually use ✨</p>
   </div>
 
+  <!-- Main Content -->
   <main>
     <article class="post2-article">
-      <ul>
-        <li><a href="https://www.notion.so/">🗂 Notion</a> – for organising my uni work & notes</li>
-        <li><a href="https://pomofocus.io/">⏱ Pomofocus</a> – focus timer that saves me daily</li>
-        <li><a href="https://www.freecodecamp.org/">💻 freeCodeCamp</a> – practice coding concepts</li>
-        <li><a href="https://www.coursera.org/">📖 Coursera</a> – free/cheap courses that add value</li>
+      <h2>✨ My Go-To Tools</h2>
+      <ul class="resource-list">
+        <li>
+          <a href="https://www.notion.so/" target="_blank">🗂 Notion</a> 
+          <span>— my digital brain for uni, notes, and planning</span>
+        </li>
+        <li>
+          <a href="https://pomofocus.io/" target="_blank">⏱ Pomofocus</a> 
+          <span>— a simple focus timer that keeps me productive</span>
+        </li>
+        <li>
+          <a href="https://www.freecodecamp.org/" target="_blank">💻 freeCodeCamp</a> 
+          <span>— practice coding concepts the fun way</span>
+        </li>
+        <li>
+          <a href="https://www.coursera.org/" target="_blank">📖 Coursera</a> 
+          <span>— affordable courses to learn something new</span>
+        </li>
       </ul>
+
+      <h2>💡 Why I Share These</h2>
+      <p>
+        These aren’t just random links. They’re tools I use almost daily to stay focused, 
+        keep learning, and organise my world. Think of this as my personal toolbox — 
+        I hope something here helps you too.
+      </p>
+
+      <p class="back-link"><a href="index.html">⬅ Back Home</a></p>
     </article>
-    <p><a href="index.html">⬅ Back Home</a></p>
   </main>
 
-  <footer><p>&copy; 2025 Sammy Writes</p></footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sammy Writes. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to Top -->
   <button id="backToTop">↑</button>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
