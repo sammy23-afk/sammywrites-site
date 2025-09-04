@@ -33,17 +33,23 @@
   </nav>
 
   <!-- Hero -->
-  <header class="hero">
+  <header class="hero home">
     <h1>Hey Besties 💖 <br> Welcome to <span>Sammy Writes</span></h1>
     <p>Coding chaos, life reflections & creative rambles ✨ Grab a ☕ and vibe with me.</p>
     <a href="blog.html" class="btn">Explore Blog 🚀</a>
   </header>
 
+  <!-- Optional Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search site...">
+    <button onclick="searchCards()">Search</button>
+  </div>
+
   <!-- Explore Section -->
   <section class="card-container">
     <div class="card">
       <h3>📖 Blog</h3>
-      <p>Read my thoughts on coding, growth, and authenticity.</p>
+      <p>Read my thoughts.</p>
       <a href="blog.html" class="btn">Dive In</a>
     </div>
     <div class="card">
@@ -58,7 +64,21 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>© 2025 Sammy. All rights reserved.</footer>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <script>
+    // Search filter
+    function searchCards() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
 </body>
 </html>
